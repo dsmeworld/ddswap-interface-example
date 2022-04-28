@@ -253,7 +253,7 @@ function V1PairMigration({ liquidityTokenAmount, token }: { liquidityTokenAmount
       {isFirstLiquidityProvider && (
         <PinkCard>
           <TYPE.body style={{ marginBottom: 8, fontWeight: 400 }}>
-            You are the first liquidity provider for this pair on Uniswap V2. Your liquidity will be migrated at the
+            You are the first liquidity provider for this pair on DDswap V2. Your liquidity will be migrated at the
             current V1 price. Your transaction cost also includes the gas to create the pool.
           </TYPE.body>
 
@@ -367,7 +367,7 @@ export default function MigrateV1Exchange({
         ) : validatedAddress && chainId && token?.equals(WETH[chainId]) ? (
           <>
             <TYPE.body my={9} style={{ fontWeight: 400 }}>
-              Because Uniswap V2 uses WETH under the hood, your Uniswap V1 WETH/ETH liquidity cannot be migrated. You
+              Because DDswap V2 uses WETH under the hood, your DDswap V1 WETH/ETH liquidity cannot be migrated. You
               may want to remove your liquidity instead.
             </TYPE.body>
 
