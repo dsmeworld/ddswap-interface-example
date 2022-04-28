@@ -2564,33 +2564,10 @@
     semver "^7.3.2"
     tsutils "^3.17.1"
 
-"@uniswap/default-token-list@^1.3.1":
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/@uniswap/default-token-list/-/default-token-list-1.3.1.tgz#e856aa8e7d4112fcb39229df3023af0da1727699"
-  integrity sha512-nLBSzWGxVlbKby6xtf3ph56NltMyHCk8ohFD97Wub7K0I66YyHKuhyV7NZq05unB8TEWWpYDcdghmgztSv6H8Q==
-
 "@uniswap/lib@1.1.1":
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@uniswap/lib/-/lib-1.1.1.tgz#0afd29601846c16e5d082866cbb24a9e0758e6bc"
   integrity sha512-2yK7sLpKIT91TiS5sewHtOa7YuM8IuBXVl4GZv2jZFys4D2sY7K5vZh6MqD25TPA95Od+0YzCVq6cTF2IKrOmg==
-
-"@uniswap/sdk@3.0.3-beta.1":
-  version "3.0.3-beta.1"
-  resolved "https://registry.yarnpkg.com/@uniswap/sdk/-/sdk-3.0.3-beta.1.tgz#ef758f45e1f7050e098956fce097aedb87e0ceed"
-  integrity sha512-8MqfVDXAHHcAnUxBAaoHdeGmLUc8Tu4GZ4n7kLabKlF2b4RUS/jnuUIdzOR9QPMdY/avw3gH/OtTxH2elDNShw==
-  dependencies:
-    "@uniswap/v2-core" "^1.0.0"
-    big.js "^5.2.2"
-    decimal.js-light "^2.5.0"
-    jsbi "^3.1.1"
-    tiny-invariant "^1.1.0"
-    tiny-warning "^1.0.3"
-    toformat "^2.0.0"
-
-"@uniswap/token-lists@^1.0.0-beta.16":
-  version "1.0.0-beta.16"
-  resolved "https://registry.yarnpkg.com/@uniswap/token-lists/-/token-lists-1.0.0-beta.16.tgz#17c5e781d490490b4f61a35a9c3106b2b1b6a57f"
-  integrity sha512-+Pu4yUQ8vUPsJW88d3pGEZTkA1T3bC7jI6wgBIcrtkQK90rfUOvgWiwj0mZBuKy/VGDm9AmSnyxYGUW2f0xn4A==
 
 "@uniswap/v2-core@1.0.0":
   version "1.0.0"
@@ -5688,6 +5665,29 @@ date-fns@^1.27.2:
   version "1.30.1"
   resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-1.30.1.tgz#2e71bf0b119153dbb4cc4e88d9ea5acfb50dc05c"
   integrity sha512-hBSVCvSmWC+QypYObzwGOd9wqdDpOt+0wl0KbU+R+uuZBS1jN8VsD1ss3irQDknRj5NvxiTF6oj/nDRnN/UQNw==
+
+ddswap-default-token-list@^1.0.0:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/ddswap-default-token-list/-/ddswap-default-token-list-1.0.1.tgz#768c38b996ac7073cfec6b3027dfa7f8ec8b2960"
+  integrity sha512-3VETfWk2xjPntdc9v5pQROWiOoQVJG0Hn99HTermRg1SaIXF4sasbTTL74MLx2+WSTubY80bvlwzHJS6ePIkqQ==
+
+ddswap-sdk@^1.2.4:
+  version "1.2.4"
+  resolved "https://registry.yarnpkg.com/ddswap-sdk/-/ddswap-sdk-1.2.4.tgz#6b5b9fa25fe3847de5e4cc460539a5274fa91a22"
+  integrity sha512-hAMm7OMwGTuzAs2MyboLfzx/kwWTxjYCqwpOyoNFcfn3E7RkYpFu5zb+xFNtgt2GawnQCt6yswk+92EZI1Do8Q==
+  dependencies:
+    "@uniswap/v2-core" "^1.0.0"
+    big.js "^5.2.2"
+    decimal.js-light "^2.5.0"
+    jsbi "^3.1.1"
+    tiny-invariant "^1.1.0"
+    tiny-warning "^1.0.3"
+    toformat "^2.0.0"
+
+ddswap-token-lists@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/ddswap-token-lists/-/ddswap-token-lists-1.0.0.tgz#41754088802b0a3c891cd086b08e52801c798e5d"
+  integrity sha512-PEnWdfvoxmWkCft1VMFepqSGULCPZmnf0X1QKyrXgNhaL8WJjQY/w27nvS9yITMQYxtsT1ZgaYv9lVApveoHtA==
 
 debug@2.6.9, debug@^2.2.0, debug@^2.3.3, debug@^2.6.0, debug@^2.6.8, debug@^2.6.9:
   version "2.6.9"
