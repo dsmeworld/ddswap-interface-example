@@ -26,7 +26,7 @@
     "@typescript-eslint/eslint-plugin": "^2.31.0",
     "@typescript-eslint/parser": "^2.31.0",
     "ddswap-default-token-list": "^1.0.0",
-    "ddswap-sdk": "^1.2.4",
+    "ddswap-sdk": "^1.2.6",
     "ddswap-token-lists": "^1.0.0",
     "@uniswap/v2-core": "1.0.0",
     "@uniswap/v2-periphery": "^1.1.0-beta.0",
