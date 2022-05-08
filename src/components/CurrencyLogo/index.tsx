@@ -3,12 +3,15 @@ import React, { useMemo } from 'react'
 import styled from 'styled-components'
 
 import EthereumLogo from '../../assets/images/ethereum-logo.png'
+import ConfluxLogo from '../../assets/images/conflux-logo.png'
+import HtLogo from '../../assets/images/ht-logo.png'
 import useHttpLocations from '../../hooks/useHttpLocations'
 import { WrappedTokenInfo } from '../../state/lists/hooks'
 import Logo from '../Logo'
 
 const getTokenLogoURL = (address: string) =>
-  `https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/${address}/logo.png`
+  `https://www.dsme.vip/assest/ethereum/assest/${address}/logo.png`
+  /*`https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/${address}/logo.png`*/
 
 const StyledEthereumLogo = styled.img<{ size: string }>`
   width: ${({ size }) => size};
@@ -47,7 +50,13 @@ export default function CurrencyLogo({
   }, [currency, uriLocations])
 
   if (currency === ETHER) {
-    return <StyledEthereumLogo src={EthereumLogo} size={size} style={style} />
+    if(ETHER.symbol === "ETH" ){
+      return <StyledEthereumLogo src={EthereumLogo} size={size} style={style} />
+    }else if(ETHER.symbol === "CFX" ){
+      return <StyledEthereumLogo src={ConfluxLogo} size={size} style={style} />
+    }else if(ETHER.symbol === "HT" ){
+      return <StyledEthereumLogo src={HtLogo} size={size} style={style} />
+    }
   }
 
   return <StyledLogo size={size} srcs={srcs} alt={`${currency?.symbol ?? 'token'} logo`} style={style} />
