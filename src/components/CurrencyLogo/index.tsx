@@ -1,5 +1,6 @@
 import { Currency, ETHER, Token } from 'ddswap-sdk'
 import React, { useMemo } from 'react'
+import { useWeb3React } from '@web3-react/core'
 import styled from 'styled-components'
 
 import EthereumLogo from '../../assets/images/ethereum-logo.png'
@@ -20,6 +21,7 @@ const StyledEthereumLogo = styled.img<{ size: string }>`
   border-radius: 24px;
 `
 
+
 const StyledLogo = styled(Logo)<{ size: string }>`
   width: ${({ size }) => size};
   height: ${({ size }) => size};
@@ -34,7 +36,10 @@ export default function CurrencyLogo({
   size?: string
   style?: React.CSSProperties
 }) {
+  
+  //获取chainid
   const uriLocations = useHttpLocations(currency instanceof WrappedTokenInfo ? currency.logoURI : undefined)
+  const {chainId} = useWeb3React()
 
   const srcs: string[] = useMemo(() => {
     if (currency === ETHER) return []
@@ -49,13 +54,16 @@ export default function CurrencyLogo({
     return []
   }, [currency, uriLocations])
 
+  //通过chainid切换coinlogo
   if (currency === ETHER) {
-    if(ETHER.symbol === "ETH" ){
+    if(chainId === 1 ){
       return <StyledEthereumLogo src={EthereumLogo} size={size} style={style} />
-    }else if(ETHER.symbol === "CFX" ){
+    }else if(chainId === 1030 ){
       return <StyledEthereumLogo src={ConfluxLogo} size={size} style={style} />
-    }else if(ETHER.symbol === "HT" ){
+    }else if(chainId === 128 ){
       return <StyledEthereumLogo src={HtLogo} size={size} style={style} />
+    }else{
+      return <StyledEthereumLogo src={EthereumLogo} size={size} style={style} />
     }
   }
 
