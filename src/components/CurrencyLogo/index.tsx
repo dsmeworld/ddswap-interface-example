@@ -6,6 +6,7 @@ import styled from 'styled-components'
 import EthereumLogo from '../../assets/images/ethereum-logo.png'
 import ConfluxLogo from '../../assets/images/conflux-logo.png'
 import HtLogo from '../../assets/images/ht-logo.png'
+import BnbLogo from '../../assets/images/bnb-logo.png'
 import useHttpLocations from '../../hooks/useHttpLocations'
 import { WrappedTokenInfo } from '../../state/lists/hooks'
 import Logo from '../Logo'
@@ -62,7 +63,10 @@ export default function CurrencyLogo({
       return <StyledEthereumLogo src={ConfluxLogo} size={size} style={style} />
     }else if(chainId === 128 ){
       return <StyledEthereumLogo src={HtLogo} size={size} style={style} />
-    }else{
+    }else if(chainId === 56){
+      return <StyledEthereumLogo src={BnbLogo} size={size} style={style} />
+    }
+    else{
       return <StyledEthereumLogo src={EthereumLogo} size={size} style={style} />
     }
   }
