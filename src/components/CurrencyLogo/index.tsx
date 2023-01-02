@@ -12,7 +12,7 @@ import { WrappedTokenInfo } from '../../state/lists/hooks'
 import Logo from '../Logo'
 
 const getTokenLogoURL = (address: string) =>
-  `https://www.dsme.vip/assest/ethereum/assest/${address}/logo.png`
+  `https://assets.dsme.world/token-info/heco/${address}/logo.png`
   /*`https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/${address}/logo.png`*/
 
 const StyledEthereumLogo = styled.img<{ size: string }>`
